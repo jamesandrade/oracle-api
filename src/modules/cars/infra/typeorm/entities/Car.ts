@@ -6,19 +6,16 @@ import {
   UpdateDateColumn
  } from 'typeorm';
 
-@Entity('users')
-class User {
+@Entity('cars')
+class Car {
   @PrimaryGeneratedColumn()
-  user_id: number;
+  car_id: number;
 
   @Column()
-  name: string;
+  mark: string;
 
   @Column({ type: 'varchar', nullable: true })
-  email: string | null;
-
-  @Column()
-  telefone: string;
+  model: string | null;
 
   @CreateDateColumn()
   created_at: Date;
@@ -26,4 +23,5 @@ class User {
   @UpdateDateColumn()
   updated_at: Date;
 }
-export default User;
+
+export default Car;

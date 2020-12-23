@@ -42,8 +42,6 @@ class UsersRepository implements IUsersRepository {
     return user;
   }
 
-  
-
   public async create({
     name,
     email,

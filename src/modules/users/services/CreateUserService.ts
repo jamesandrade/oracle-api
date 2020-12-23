@@ -17,11 +17,7 @@ class CreateUserService {
     private usersRepository: IUsersRepository,
   ) {}
 
-  async execute({
-    name,
-    email,
-    telefone,
-  }: IRequest): Promise<User> {
+  async execute({ name, email, telefone }: IRequest): Promise<User> {
     let checkUserExists;
     if (email) {
       checkUserExists = await this.usersRepository.findByEmail(email);

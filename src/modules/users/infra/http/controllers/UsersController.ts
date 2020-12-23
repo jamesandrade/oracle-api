@@ -7,11 +7,7 @@ import DestroyUserService from '@modules/users/services/DestroyUserService';
 
 export default class UsersController {
   public async create(req: Request, res: Response): Promise<Response> {
-    const {
-      name,
-      email,
-      telefone,
-    } = req.body;
+    const { name, email, telefone } = req.body;
 
     const createUser = container.resolve(CreateUserService);
 
@@ -24,6 +20,7 @@ export default class UsersController {
     return res.json(classToClass(user));
   }
 
+  // eslint-disable-next-line class-methods-use-this
   public async destroy(req: Request, res: Response): Promise<Response> {
     const user_id = req.params.id;
 

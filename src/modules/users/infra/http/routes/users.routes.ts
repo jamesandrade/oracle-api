@@ -18,7 +18,6 @@ usersRouter.post(
   usersController.create,
 );
 
-
 usersRouter.delete('/:id', usersController.destroy);
 
 export default usersRouter;
