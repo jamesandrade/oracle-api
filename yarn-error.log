@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/bin/node /usr/share/yarn/bin/yarn.js add @typescript-eslint/eslint-plugin@latest eslint-config-airbnb-base@latest eslint-plugin-import@^2.21.2 @typescript-eslint/parser@latest -D
+  /usr/bin/node /usr/share/yarn/bin/yarn.js build
 
 PATH: 
   /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
@@ -14,17 +14,12 @@ Platform:
   linux x64
 
 Trace: 
-  Error: EIO: i/o error, write
-      at writeSync (fs.js:573:3)
-      at SyncWriteStream._write (internal/fs/sync_write_stream.js:22:3)
-      at doWrite (_stream_writable.js:415:12)
-      at writeOrBuffer (_stream_writable.js:399:5)
-      at SyncWriteStream.Writable.write (_stream_writable.js:299:11)
-      at ConsoleReporter.warn (/usr/share/yarn/lib/cli.js:96792:17)
-      at _loop3 (/usr/share/yarn/lib/cli.js:49481:27)
-      at PackageLinker.resolvePeerModules (/usr/share/yarn/lib/cli.js:49500:19)
-      at PackageLinker.<anonymous> (/usr/share/yarn/lib/cli.js:49596:12)
+  SyntaxError: /home/jameson/Área de Trabalho/oracle-crud/orm/package.json: Unexpected token } in JSON at position 1841
+      at JSON.parse (<anonymous>)
+      at /usr/share/yarn/lib/cli.js:1625:59
       at Generator.next (<anonymous>)
+      at step (/usr/share/yarn/lib/cli.js:310:30)
+      at /usr/share/yarn/lib/cli.js:321:13
 
 npm manifest: 
   {
@@ -55,12 +50,12 @@ npm manifest:
       "babel-plugin-transform-typescript-metadata": "^0.3.0",
       "eslint": "^6.8.0",
       "eslint-config-airbnb-base": "^14.2.1",
-      "eslint-config-prettier": "^6.10.1",
+      "eslint-config-prettier": "^7.1.0",
       "eslint-import-resolver-typescript": "^2.3.0",
       "eslint-plugin-import": "^2.21.2",
-      "eslint-plugin-prettier": "^3.1.3",
+      "eslint-plugin-prettier": "^3.3.0",
       "jest": "^25.5.4",
-      "prettier": "^2.0.4",
+      "prettier": "^2.2.1",
       "ts-jest": "^25.4.0",
       "ts-node-dev": "^1.0.0-pre.44",
       "tsconfig-paths": "^3.9.0",
@@ -78,7 +73,7 @@ npm manifest:
       "oracledb": "^5.1.0",
       "reflect-metadata": "^0.1.13",
       "tsyringe": "^4.1.0",
-      "typeorm": "0.2.29"
+      "typeorm": "0.2.29",
     }
   }
 
@@ -2645,12 +2640,10 @@ Lockfile:
       object.assign "^4.1.2"
       object.entries "^1.1.2"
   
-  eslint-config-prettier@^6.10.1:
-    version "6.15.0"
-    resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-6.15.0.tgz#7f93f6cb7d45a92f1537a70ecc06366e1ac6fed9"
-    integrity sha512-a1+kOYLR8wMGustcgAjdydMsQ2A/2ipRPwRKUmfYaSxc9ZPcrku080Ctl6zrZzZNs/U82MjSv+qKREkoq3bJaw==
-    dependencies:
-      get-stdin "^6.0.0"
+  eslint-config-prettier@^7.1.0:
+    version "7.1.0"
+    resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-7.1.0.tgz#5402eb559aa94b894effd6bddfa0b1ca051c858f"
+    integrity sha512-9sm5/PxaFG7qNJvJzTROMM1Bk1ozXVTKI0buKOyb0Bsr1hrwi0H/TzxF/COtf1uxikIK8SwhX7K6zg78jAzbeA==
   
   eslint-import-resolver-node@^0.3.4:
     version "0.3.4"
@@ -2698,7 +2691,7 @@ Lockfile:
       resolve "^1.17.0"
       tsconfig-paths "^3.9.0"
   
-  eslint-plugin-prettier@^3.1.3:
+  eslint-plugin-prettier@^3.3.0:
     version "3.3.0"
     resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-3.3.0.tgz#61e295349a65688ffac0b7808ef0a8244bdd8d40"
     integrity sha512-tMTwO8iUWlSRZIwS9k7/E4vrTsfvsrcM5p1eftyuqWH25nKsz/o6/54I7jwQ/3zobISyC7wMy9ZsFwgTxOcOpQ==
@@ -3236,11 +3229,6 @@ Lockfile:
     version "4.0.1"
     resolved "https://registry.yarnpkg.com/get-stdin/-/get-stdin-4.0.1.tgz#b968c6b0a04384324902e8bf1a5df32579a450fe"
     integrity sha1-uWjGsKBDhDJJAui/Gl3zJXmkUP4=
-  
-  get-stdin@^6.0.0:
-    version "6.0.0"
-    resolved "https://registry.yarnpkg.com/get-stdin/-/get-stdin-6.0.0.tgz#9e09bf712b360ab9225e812048f71fde9c89657b"
-    integrity sha512-jp4tHawyV7+fkkSKyvjuLZswblUtz+SQKzSWnBbii16BuZksJlU1wuBYXY75r+duh/llF1ur6oNwi+2ZzjKZ7g==
   
   get-stream@^4.0.0:
     version "4.1.0"
@@ -5189,7 +5177,7 @@ Lockfile:
     dependencies:
       fast-diff "^1.1.2"
   
-  prettier@^2.0.4:
+  prettier@^2.2.1:
     version "2.2.1"
     resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.2.1.tgz#795a1a78dd52f073da0cd42b21f9c91381923ff5"
     integrity sha512-PqyhM2yCjg/oKkFPtTGUojv7gnZAoG80ttl45O6x2Ug/rMJw4wcc9k6aaf2hibP7BGVCCM33gZoGjyvt9mm16Q==
@@ -6275,7 +6263,7 @@ Lockfile:
       ts-node "^9.0.0"
       tsconfig "^7.0.0"
   
-  ts-node@^9.0.0:
+  ts-node@^9.0.0, ts-node@^9.1.1:
     version "9.1.1"
     resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-9.1.1.tgz#51a9a450a3e959401bda5f004a72d54b936d376d"
     integrity sha512-hPlt7ZACERQGf03M253ytLY3dHbGNGrAq9qIHWUY9XHYl1z7wYngSr3OQ5xmui8o2AaxsONxIzjafLUiWBo1Fg==
