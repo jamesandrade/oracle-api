@@ -37,6 +37,6 @@ app.use((err: Error, req: Request, res: Response, _: NextFunction) => {
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 
 // eslint-disable-next-line func-names
-app.listen(3333, () => {
+app.listen(process.env.PORT || 3333, () => {
   console.log('🚀 Server started on port 3333!');
 });
